@@ -1,0 +1,283 @@
+.hero {
+  padding-top: 64px;
+}
+
+/* hero__header */
+
+.hero__header-list {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  margin-bottom: 40px;
+}
+
+.hero__header-list-icon {
+  transform: rotate(-90deg);
+}
+
+.hero__header-list-item {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+.hero__header-list-item-link.js-active {
+  color: var(--white);
+}
+
+.hero__header-list-item {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--white-50);
+}
+
+.hero__header-list-item:last-child {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* hero__left-content */
+
+.hero__left-content {
+  position: relative;
+  width: 100%;
+  max-width: 968px;
+  border-radius: 16px;
+  padding: 48px 24px;
+  background-color: var(--dark-grey);
+}
+
+.hero__left-content-section {
+  padding-top: 16px;
+  border-top: 1px solid var(--white-20);
+}
+
+.hero__left-content-image {
+  position: absolute;
+  top: 95px;
+  right: 36px;
+  z-index: 10;
+}
+
+.hero__left-content-picture::after {
+  content: '';
+  position: absolute;
+  top: 160px;
+  right: 190px;
+  width: 214px;
+  height: 58px;
+  border-radius: 100%;
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  filter: blur(80px);
+}
+
+/* hero__left-content-main-info */
+
+.hero__left-content-main-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  max-width: fit-content;
+  margin-bottom: 40px;
+}
+
+.hero__left-content-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.hero__left-content-rentalPrice {
+  font-size: 24px;
+}
+
+.hero__left-content-rentalPrice span {
+  font-size: 16px;
+}
+
+.hero__left-content-title-wrapper {
+  display: grid;
+  row-gap: 16px;
+}
+
+.hero__left-content-list-title {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.hero__left-content-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 8px;
+}
+
+.hero__left-content-list li {
+  font-weight: 300;
+}
+
+.hero__left-content-list-item {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.hero__left-content-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* hero__left-content-add */
+
+.hero__left-content-add {
+  display: grid;
+  row-gap: 32px;
+  padding-bottom: 40px;
+}
+
+.hero__left-content-add-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 24px;
+}
+
+.hero__left-content-add-title,
+.hero__left-content-insurance-title {
+  font-size: 24px;
+}
+
+.hero__left-content-add-item {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  width: 294px;
+  height: 77px;
+  background-color: var(--white-10);
+}
+
+.hero__left-content-add-item.js-active {
+  background-color: var(--primary);
+}
+
+.hero__left-content-add-icon-wrapper {
+  padding: 8px;
+  height: 100%;
+}
+
+.hero__left-content-add-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 20px;
+  flex-grow: 1;
+  font-size: 16px;
+  width: 188px;
+  height: 61px;
+  padding-left: 16px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero__left-content-add-services-price {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.hero__left-content-add-button {
+  width: 34px;
+  height: 100%;
+  border-radius: 0 8px 8px 0;
+  background-color: var(--white-20);
+}
+
+.hero__left-content-add-button.js-active {
+  background-color: var(--primary-light);
+}
+
+/* hero__left-content-insurance */
+
+.hero__left-content-insurance-title {
+  margin-bottom: 32px;
+}
+
+.hero__left-content-insurance-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+}
+
+.hero__left-content-insurance-list-item {
+  width: calc((100% - 32px) / 3);
+}
+
+/* insurance-card */
+
+.insurance-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  height: 327px;
+  background-color: var(--white-5);
+  border-radius: 16px;
+}
+
+.insurance-card.js-active {
+  background-image: url('../../images/hero-section/card-bg.png'),
+    linear-gradient(161deg, #b68867 0%, #bc8473 100%);
+}
+
+.insurance-card__status {
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.insurance-card__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.insurance-card__notice {
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+
+.insurance-card__list {
+  display: grid;
+  row-gap: 8px;
+  margin-bottom: 16px;
+}
+
+.insurance-card__list-item {
+  display: flex;
+  column-gap: 8px;
+}
+
+.insurance-card__list-item svg {
+  flex-shrink: 0;
+}
+
+.insurance-card__description {
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--white-30);
+}

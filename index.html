@@ -3,15 +3,555 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/iamges/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
     <title>flexicar-project</title>
   </head>
   <body>
-    <header>
-      <p>Hello world</p>
+    <header class="header">
+      <a href="/">
+        <svg class="logo">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#">Book</a></li>
+          <li class="header__nav-item"><a href="#">Help</a></li>
+          <li class="header__nav-item"><a href="#">FAQ</a></li>
+          <li class="header__nav-item"><a href="#">Rental Policies</a></li>
+          <li class="header__nav-item"><a href="#">Blog&Guides</a></li>
+        </ul>
+      </nav>
+      <ul class="header__user-panel user-panel">
+        <li class="user-panel__lang">
+          <span>EN</span>
+          <svg width="14" height="8" aria-hidden="true">
+            <use href="./images/sprite.svg#icon-header-arrow"></use>
+          </svg>
+        </li>
+        <li class="user-panel__phone">
+          <a
+            class="user-panel__link"
+            href="tel:+1234567890"
+            aria-label="Call us"
+          >
+            <svg width="21" height="21" aria-hidden="true">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+            <span> +123 456 7890 </span>
+          </a>
+        </li>
+        <li class="user-panel__login">
+          <a class="user-panel__link" href="#" aria-label="Sign in">
+            <svg width="21" height="21" aria-hidden="true">
+              <use href="./images/sprite.svg#icon-signin"></use>
+            </svg>
+            <span>Sign in</span>
+          </a>
+        </li>
+        <li class="user-panel__burger-button">
+          <button class="burger-button" type="button">
+            <svg width="20" height="14" aria-hidden="true">
+              <use href="./images/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </header>
-    <main></main>
+    <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <header class="hero__header">
+            <ul class="hero__header-list">
+              <li class="hero__header-list-item">
+                <a class="hero__header-list-item-link" href="#">Home</a>
+                <svg class="hero__header-list-icon" width="6" height="10">
+                  <use href="./images/sprite.svg#icon-header-arrow"></use>
+                </svg>
+              </li>
+              <li class="hero__header-list-item">
+                <a class="hero__header-list-item-link" href="#"
+                  >Search results</a
+                >
+                <svg class="hero__header-list-icon" width="6" height="10">
+                  <use href="./images/sprite.svg#icon-header-arrow"></use>
+                </svg>
+              </li>
+              <li class="hero__header-list-item">
+                <a class="hero__header-list-item-link js-active" href="#"
+                  >Volkswagen Touareg</a
+                >
+              </li>
+            </ul>
+          </header>
+          <div class="hero__left-content">
+            <picture class="hero__left-content-picture">
+              <source
+                srcset="
+                  ./images/hero-section/car.webp    1x,
+                  ./images/hero-section/car@2x.webp 2x
+                "
+                media="(min-width: 1468px)"
+              />
+              <source
+                srcset="
+                  ./images/hero-section/car_tab.webp    1x,
+                  ./images/hero-section/car_tab@2x.webp 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/hero-section/car_mob.webp    1x,
+                  ./images/hero-section/car_mob@2x.webp 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                class="hero__left-content-image"
+                src="./images/hero-section/car.webp"
+                alt="car picture"
+              />
+            </picture>
+            <section class="hero__left-content-main-info">
+              <div class="hero__left-content-title-wrapper">
+                <h3 class="hero__left-content-title">Volkswagen Touareg</h3>
+                <div class="hero__left-content-rentalPrice">
+                  32,98 <span>EUR/day</span>
+                </div>
+              </div>
+              <div class="hero__left-content-list-wrapper">
+                <span class="hero__left-content-list-title"
+                  >Included in Price</span
+                >
+                <ul class="hero__left-content-list">
+                  <li class="hero__left-content-list-item">
+                    <svg width="16" height="17" aria-hidden="true">
+                      <use
+                        href="./images/sprite.svg#icon-check-circle-broken"
+                      ></use>
+                    </svg>
+                    <span>Airport/City Fee</span>
+                  </li>
+                  <li class="hero__left-content-list-item">
+                    <svg width="16" height="17" aria-hidden="true">
+                      <use
+                        href="./images/sprite.svg#icon-check-circle-broken"
+                      ></use>
+                    </svg>
+                    <span>Local Tax</span>
+                  </li>
+                  <li class="hero__left-content-list-item">
+                    <svg width="16" height="17" aria-hidden="true">
+                      <use
+                        href="./images/sprite.svg#icon-check-circle-broken"
+                      ></use>
+                    </svg>
+                    <span>Registration Fee</span>
+                  </li>
+                  <li class="hero__left-content-list-item">
+                    <svg width="16" height="17" aria-hidden="true">
+                      <use
+                        href="./images/sprite.svg#icon-check-circle-broken"
+                      ></use>
+                    </svg>
+                    <span>Unlimited Mileage</span>
+                  </li>
+                </ul>
+              </div>
+              <ul class="hero__left-content-details">
+                <li class="hero__left-content-list-item">
+                  <svg width="14" height="12" aria-hidden="true">
+                    <use href="./images/sprite.svg#icon-car-doors"></use>
+                  </svg>
+                  <span>5 Doors</span>
+                </li>
+                <li class="hero__left-content-list-item">
+                  <svg width="14" height="12" aria-hidden="true">
+                    <use href="./images/sprite.svg#icon-manual"></use>
+                  </svg>
+                  <span>5 Manual</span>
+                </li>
+                <li class="hero__left-content-list-item">
+                  <svg width="14" height="12" aria-hidden="true">
+                    <use href="./images/sprite.svg#icon-luggage"></use>
+                  </svg>
+                  <span>3 Suitcase</span>
+                </li>
+                <li class="hero__left-content-list-item">
+                  <svg width="14" height="12" aria-hidden="true">
+                    <use href="./images/sprite.svg#icon-users"></use>
+                  </svg>
+                  <span>5 Passengers</span>
+                </li>
+              </ul>
+            </section>
+            <section class="hero__left-content-section hero__left-content-add">
+              <h4 class="hero__left-content-add-title">Add on extras</h4>
+              <ul class="hero__left-content-add-list">
+                <li class="hero__left-content-add-item js-active">
+                  <div class="hero__left-content-add-icon-wrapper">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="22"
+                      height="10"
+                    >
+                      <use href="./images/sprite.svg#icon-infinity"></use>
+                    </svg>
+                  </div>
+                  <div class="hero__left-content-add-services">
+                    <span>Unlimited Mileage</span>
+                    <span class="hero__left-content-add-services-price"
+                      >$15</span
+                    >
+                  </div>
+                  <button
+                    class="hero__left-content-add-button js-active"
+                    type="button"
+                  >
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="16"
+                      height="3"
+                    >
+                      <use href="./images/sprite.svg#icon-minus"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="hero__left-content-add-item">
+                  <div class="hero__left-content-add-icon-wrapper">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="22"
+                      height="22"
+                    >
+                      <use href="./images/sprite.svg#icon-globe"></use>
+                    </svg>
+                  </div>
+                  <div class="hero__left-content-add-services">
+                    <span>Cross-border Fee</span>
+                    <span class="hero__left-content-add-services-price"
+                      >15 EUR</span
+                    >
+                  </div>
+                  <button class="hero__left-content-add-button" type="button">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="16"
+                      height="17"
+                    >
+                      <use href="./images/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="hero__left-content-add-item">
+                  <div class="hero__left-content-add-icon-wrapper">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="21"
+                      height="20"
+                    >
+                      <use href="./images/sprite.svg#icon-petrol"></use>
+                    </svg>
+                  </div>
+                  <div class="hero__left-content-add-services">
+                    <span>Full Tank Service</span>
+                    <span class="hero__left-content-add-services-price"
+                      >15 EUR</span
+                    >
+                  </div>
+                  <button class="hero__left-content-add-button" type="button">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="16"
+                      height="17"
+                    >
+                      <use href="./images/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="hero__left-content-add-item">
+                  <div class="hero__left-content-add-icon-wrapper">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="22"
+                      height="22"
+                    >
+                      <use href="./images/sprite.svg#icon-baby_seat"></use>
+                    </svg>
+                  </div>
+                  <div class="hero__left-content-add-services">
+                    <span>Child Seat</span>
+                    <span class="hero__left-content-add-services-price"
+                      >15 EUR</span
+                    >
+                  </div>
+                  <button class="hero__left-content-add-button" type="button">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="16"
+                      height="17"
+                    >
+                      <use href="./images/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="hero__left-content-add-item">
+                  <div class="hero__left-content-add-icon-wrapper">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="22"
+                      height="22"
+                    >
+                      <use href="./images/sprite.svg#icon-pointer"></use>
+                    </svg>
+                  </div>
+                  <div class="hero__left-content-add-services">
+                    <span>GPS Navigation System</span>
+                    <span class="hero__left-content-add-services-price"
+                      >15 EUR</span
+                    >
+                  </div>
+                  <button class="hero__left-content-add-button" type="button">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="16"
+                      height="17"
+                    >
+                      <use href="./images/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="hero__left-content-add-item">
+                  <div class="hero__left-content-add-icon-wrapper">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="24"
+                      height="18"
+                    >
+                      <use href="./images/sprite.svg#icon-wifi"></use>
+                    </svg>
+                  </div>
+                  <div class="hero__left-content-add-services">
+                    <span>Wi-Fi Hotspot</span>
+                    <span class="hero__left-content-add-services-price"
+                      >15 EUR</span
+                    >
+                  </div>
+                  <button class="hero__left-content-add-button" type="button">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="16"
+                      height="17"
+                    >
+                      <use href="./images/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="hero__left-content-add-item">
+                  <div class="hero__left-content-add-icon-wrapper">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="22"
+                      height="22"
+                    >
+                      <use
+                        href="./images/sprite.svg#icon-additional_driver"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div class="hero__left-content-add-services">
+                    <span>Additional Driver</span>
+                    <span class="hero__left-content-add-services-price"
+                      >15 EUR</span
+                    >
+                  </div>
+                  <button class="hero__left-content-add-button" type="button">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="16"
+                      height="17"
+                    >
+                      <use href="./images/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="hero__left-content-add-item">
+                  <div class="hero__left-content-add-icon-wrapper">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="20"
+                      height="20"
+                    >
+                      <use href="./images/sprite.svg#icon-headphones"></use>
+                    </svg>
+                  </div>
+                  <div class="hero__left-content-add-services">
+                    <span>Roadside Waiver</span>
+                    <span class="hero__left-content-add-services-price"
+                      >15 EUR</span
+                    >
+                  </div>
+                  <button class="hero__left-content-add-button" type="button">
+                    <svg
+                      class="hero__left-content-add-icon"
+                      width="16"
+                      height="17"
+                    >
+                      <use href="./images/sprite.svg#icon-plus"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </section>
+            <section
+              class="hero__left-content-section hero__left-content-insurance"
+            >
+              <h4 class="hero__left-content-insurance-title">Insurance</h4>
+              <ul class="hero__left-content-insurance-list">
+                <li class="hero__left-content-insurance-list-item">
+                  <article
+                    class="hero__left-content-insurance-card insurance-card"
+                  >
+                    <span class="insurance-card__status">No Insurance</span>
+                    <h3 class="insurance-card__title">Free</h3>
+                    <span class="insurance-card__notice"
+                      >Important Notice:</span
+                    >
+                    <ul class="insurance-card__list">
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-alert-circle"
+                          ></use>
+                        </svg>
+                        <p>
+                          You are fully responsible for any damage to the
+                          vehicle.
+                        </p>
+                      </li>
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-alert-circle"
+                          ></use>
+                        </svg>
+                        <p>
+                          Full repair costs will be charged in case of an
+                          accident or damage (no financial limit).
+                        </p>
+                      </li>
+                    </ul>
+                    <p class="insurance-card__description">
+                      We strongly recommend choosing one of the insurance
+                      options to ensure a worry-free journey.
+                    </p>
+                  </article>
+                </li>
+                <li class="hero__left-content-insurance-list-item">
+                  <article
+                    class="hero__left-content-insurance-card insurance-card js-active"
+                  >
+                    <span class="insurance-card__status">Basic Insurance</span>
+                    <h3 class="insurance-card__title">15 EUR/day</h3>
+                    <ul class="insurance-card__list">
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-check-circle-broken"
+                          ></use>
+                        </svg>
+                        <p>
+                          Coverage for vehicle damage in case of an accident
+                          (with excess).
+                        </p>
+                      </li>
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-check-circle-broken"
+                          ></use>
+                        </svg>
+                        <p>
+                          Limited financial liability with a deductible/excess.
+                        </p>
+                      </li>
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-check-circle-broken"
+                          ></use>
+                        </svg>
+                        <p>
+                          Partial coverage for car body damages (does not cover
+                          tires, windows, roof, or undercarriage).
+                        </p>
+                      </li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="hero__left-content-insurance-list-item">
+                  <article
+                    class="hero__left-content-insurance-card insurance-card"
+                  >
+                    <span class="insurance-card__status"
+                      >Comprehensive Insurance</span
+                    >
+                    <h3 class="insurance-card__title">25 EUR/day</h3>
+                    <ul class="insurance-card__list">
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-green-circle"
+                          ></use>
+                        </svg>
+                        <p>
+                          Full coverage for all damages (including tires,
+                          windows, roof, and undercarriage).
+                        </p>
+                      </li>
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-green-circle"
+                          ></use>
+                        </svg>
+                        <p>Theft protection.</p>
+                      </li>
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-green-circle"
+                          ></use>
+                        </svg>
+                        <p>No deductible/excess (or minimal excess).</p>
+                      </li>
+                      <li class="insurance-card__list-item">
+                        <svg width="16" height="16">
+                          <use
+                            href="./images/sprite.svg#icon-green-circle"
+                          ></use>
+                        </svg>
+                        <p>
+                          Roadside assistance in case of breakdowns or
+                          accidents.
+                        </p>
+                      </li>
+                    </ul>
+                  </article>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <aside class="hero__right-form"></aside>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
